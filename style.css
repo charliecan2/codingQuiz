@@ -1,0 +1,37 @@
+#high-scores {
+    float: left; 
+    margin-top: auto; 
+    color: rebeccapurple;
+    font-size: 18px;
+    margin-left: 10px;
+}
+#time-left {
+    float: right;
+    margin-top: auto;
+    color: rebeccapurple;
+    font-size: 18px;
+    margin-right: 15px;
+}
+p {
+    text-align: center;
+    font-family:Arial, Helvetica, sans-serif;
+    
+}
+h1 {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+#preview {
+    padding: 5px;
+}
+.container {
+    text-align: center;
+    clear: both;
+    position: relative;
+    top: 40px;
+}
+button {
+    background-color: rebeccapurple;
+    color: white;
+    clear: both;
+    margin: 5px;
+}
