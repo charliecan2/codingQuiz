@@ -23,7 +23,7 @@ var questionsAndAnswers =
 ];
 
 var totalSeconds = 15
-var holdInterval = 0;
+var interval = true;
 var secondsDeducted = 10;
 
 
@@ -34,24 +34,29 @@ function generateQNA(){
         var userQuestion = questionsAndAnswers[i].question;
         questionPlace.text(userQuestion);
         responsesPlace.empty();
+        
         for (r = 0; r < 4; r++){
             var userResponses = questionsAndAnswers[i].responses[r];
             var li = $("<li></li>");
+            var button = $("<button></button>")
             responsesPlace.append(li);
-            li.text(userResponses);
+            li.append(button);
+            button.text(userResponses);
         }  
     }
 }
 
 startQuiz.on("click", function(){
    
-    if (holdInterval === 0){
-        holdInterval = setInterval(function() {
+    if (interval){
+        interval = setInterval(function() {
             totalSeconds--;
             secondsLeft.text(totalSeconds);
 
             if (totalSeconds == 0) {
-                clearInterval(holdInterval);
+                clearInterval(interval);
+                p.css({"font-size": "24px"}, {"font-weight": "bolder"});
+                p.text("Time's up!");
             }
         }, 1000);
     }

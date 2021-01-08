@@ -34,4 +34,9 @@ button {
     color: white;
     clear: both;
     margin: 5px;
+    width: 25%;
+}
+li {
+    color: white;
+    margin-bottom: 10px;
 }
