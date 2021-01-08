@@ -22,7 +22,7 @@ var questionsAndAnswers =
             answer: "Console.log" }
 ];
 
-var totalSeconds = 15*questionsAndAnswers.length;
+var totalSeconds = 15
 var holdInterval = 0;
 var secondsDeducted = 10;
 
@@ -49,6 +49,10 @@ startQuiz.on("click", function(){
         holdInterval = setInterval(function() {
             totalSeconds--;
             secondsLeft.text(totalSeconds);
+
+            if (totalSeconds == 0) {
+                clearInterval(holdInterval);
+            }
         }, 1000);
     }
     
